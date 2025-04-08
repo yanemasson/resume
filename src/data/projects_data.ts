@@ -1,20 +1,10 @@
-export interface ProjectItem {
-    screens?: string[]
-    description: string
-    stack?: string
-    siteLink?: string
-    gitLink?: string
-}
-export interface Project {
-    title: string
-    description?: string
-    items: ProjectItem[]
-}
+import {ProjectType} from "../types/project_type.ts";
 
-export const projects:Project[] = [
+export const projects_data:ProjectType[] = [
     {
         title: 'Backstage group',
         description: 'Сайт организатора концертов Backstage Group, переживший 3 итерации',
+        link: 'https://backstagegroup.ru',
         items: [
             {
                 screens: [
@@ -23,7 +13,6 @@ export const projects:Project[] = [
                 ],
                 description: 'Многостраничный сайт по продаже билетов с админ-панелью для управления концертами и контентом, динамической генерацией страниц. Реализована возможность для пользователей добавлять отзывы и их модерация, парсеры концертов и отзывов. Интегрированы виджет билетной кассы radario, метрики от Mail.ru, Yandex и Google. Pixel-perfect верстка по макету Figma, SEO-оптимизация и адаптивный дизайн (в том числе под планшеты).',
                 stack: 'TypeScript, React, React Router, TailWind, Decap CMS',
-                siteLink: 'https://backstagegroup.ru',
                 gitLink: 'https://github.com/yanemasson/theatre'
             },
             {
@@ -70,28 +59,15 @@ export const projects:Project[] = [
     },
     {
         title: 'Hatomarano Art',
+        link: "https://stalwart-sprinkles-15b968.netlify.app/",
+        description: 'Многостраничный сайт-портфолио художника и аниматора с админ-панелью для управления ' +
+            'контентом.На данный момент не обновляется ' +
+            'владельцем, но все еще существует ¯\\_(ツ)_/¯',
         items: [
             {
-                description: 'Многостраничный сайт-портфолио художника и аниматора с админ-панелью для управления ' +
-                    'контентом, реализована динамическая генерация страниц. На данный момент не обновляется ' +
-                    'владельцем, но все еще существует ¯\\_(ツ)_/¯',
                 stack: 'TypeScript, React, HashRouter, TailWind, Decap CMS',
                 gitLink: "https://github.com/yanemasson/hatomaran",
-                siteLink: "https://stalwart-sprinkles-15b968.netlify.app/"
             }
         ]
     },
-    {
-        title: 'call me with u',
-        items: [
-            {
-                description: 'Многостраничный сайт музыканта с админ-панелью для управления контентом и интеграцией' +
-                    ' виджетов социальных сетей',
-                stack: 'ypeScript, React, ReactRouter, TailWind, Decap CMS',
-                gitLink: '',
-                siteLink: ''
-            }
-        ]
-    }
-
 ]

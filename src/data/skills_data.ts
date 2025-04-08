@@ -1,12 +1,6 @@
+import {SkillList} from "../types/skills_type.ts";
 
-export interface SkillList {
-    items: SkillItem[]
-}
-export interface SkillItem {
-    title: string,
-    items: string[]
-}
-export const HardSkills:SkillList = {
+export const hard_skills: SkillList = {
     items:
     [
         {
@@ -23,7 +17,7 @@ export const HardSkills:SkillList = {
         }
     ]
 }
-export const SoftSkills:SkillList = {
+export const soft_skills:SkillList = {
     items: [
         {
             title: "Эффективная коммуникация",
